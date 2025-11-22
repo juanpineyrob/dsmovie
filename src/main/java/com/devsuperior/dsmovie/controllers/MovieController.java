@@ -2,6 +2,7 @@ package com.devsuperior.dsmovie.controllers;
 
 import java.net.URI;
 
+import com.devsuperior.dsmovie.dtos.MovieGenreDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -47,6 +48,20 @@ public class MovieController {
 		return service.findAll(title, pageable);
 	}
 
+    @GetMapping(produces = "application/vdn.devsuperior.dsmovie-v1+json")
+    @Operation(
+            description = "Get all movies",
+            summary = "List all movies",
+            responses = {
+                    @ApiResponse(description = "Ok", responseCode = "200")
+            }
+    )
+    public Page<MovieGenreDTO> findAllV1(
+            @RequestParam(value="title", defaultValue = "") String title,
+            Pageable pageable) {
+        return service.findAllMovieGenre(title, pageable);
+    }
+
 	@GetMapping(value = "/{id}",
                 produces = "application/json")
     @Operation(
@@ -60,6 +75,20 @@ public class MovieController {
 	public MovieDTO findById(@PathVariable Long id) {
 		return service.findById(id);
 	}
+
+    @GetMapping(value = "/{id}",
+            produces = "application/vdn.devsuperior.dsmovie-v1+json")
+    @Operation(
+            description = "Get movie by id",
+            summary = "List movie by id",
+            responses = {
+                    @ApiResponse(description = "Ok", responseCode = "200"),
+                    @ApiResponse(description = "Not Found", responseCode = "404")
+            }
+    )
+    public MovieDTO findByIdMovieGenre(@PathVariable Long id) {
+        return service.findById(id);
+    }
 
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@PostMapping(produces = "application/json")
