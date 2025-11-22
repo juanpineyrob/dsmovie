@@ -1,9 +1,10 @@
-package com.devsuperior.dsmovie.dto;
+package com.devsuperior.dsmovie.dtos;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.hibernate.validator.constraints.URL;
 
 import com.devsuperior.dsmovie.entities.MovieEntity;
@@ -16,6 +17,7 @@ public class MovieDTO {
 
 	private static final DecimalFormat df = new DecimalFormat("#.##", new DecimalFormatSymbols(Locale.US));
 
+    @Schema(description = "Database generated movie id")
 	private Long id;
 	
 	@NotBlank(message = "Required field")
@@ -31,6 +33,10 @@ public class MovieDTO {
 	@NotBlank(message = "Required field")
 	@URL(message = "Field must be a valid url")
 	private String image;
+
+    public MovieDTO() {
+
+    }
 
 	public MovieDTO(Long id, String title, Double score, Integer count, String image) {
 		this.id = id;

@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.dto;
+package com.devsuperior.dsmovie.dtos;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import com.devsuperior.dsmovie.entities.ScoreEntity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
@@ -15,11 +16,15 @@ public class ScoreDTO {
 	private static final DecimalFormat df = new DecimalFormat("#.##", new DecimalFormatSymbols(Locale.US));
 
 	@NotNull(message = "Required field")
-	private Long movieId;
+    private Long movieId;
 
 	@PositiveOrZero(message = "Score should be greater than or equal to zero")
 	@Max(value = 5, message = "Score should not be greater than five")
 	private Double score;
+
+    public ScoreDTO() {
+
+    }
 
 	public ScoreDTO(Long movieId, Double score) {
 		this.movieId = movieId;

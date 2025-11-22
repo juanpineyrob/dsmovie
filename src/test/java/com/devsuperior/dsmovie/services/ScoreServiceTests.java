@@ -1,7 +1,7 @@
 package com.devsuperior.dsmovie.services;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
-import com.devsuperior.dsmovie.dto.ScoreDTO;
+import com.devsuperior.dsmovie.dtos.MovieDTO;
+import com.devsuperior.dsmovie.dtos.ScoreDTO;
 import com.devsuperior.dsmovie.entities.MovieEntity;
 import com.devsuperior.dsmovie.entities.ScoreEntity;
 import com.devsuperior.dsmovie.entities.UserEntity;
@@ -11,7 +11,6 @@ import com.devsuperior.dsmovie.services.exceptions.ResourceNotFoundException;
 import com.devsuperior.dsmovie.tests.MovieFactory;
 import com.devsuperior.dsmovie.tests.ScoreFactory;
 import com.devsuperior.dsmovie.tests.UserFactory;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

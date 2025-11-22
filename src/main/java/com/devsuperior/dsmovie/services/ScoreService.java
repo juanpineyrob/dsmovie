@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
-import com.devsuperior.dsmovie.dto.ScoreDTO;
+import com.devsuperior.dsmovie.dtos.MovieDTO;
+import com.devsuperior.dsmovie.dtos.ScoreDTO;
 import com.devsuperior.dsmovie.entities.MovieEntity;
 import com.devsuperior.dsmovie.entities.ScoreEntity;
 import com.devsuperior.dsmovie.entities.UserEntity;

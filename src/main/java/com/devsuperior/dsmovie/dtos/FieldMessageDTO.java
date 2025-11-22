@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.dto;
+package com.devsuperior.dsmovie.dtos;
 
 public class FieldMessageDTO {
 	

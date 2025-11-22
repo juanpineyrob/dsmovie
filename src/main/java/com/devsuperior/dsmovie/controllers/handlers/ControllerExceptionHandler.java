@@ -9,8 +9,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.devsuperior.dsmovie.dto.CustomErrorDTO;
-import com.devsuperior.dsmovie.dto.ValidationErrorDTO;
+import com.devsuperior.dsmovie.dtos.CustomErrorDTO;
+import com.devsuperior.dsmovie.dtos.ValidationErrorDTO;
 import com.devsuperior.dsmovie.services.exceptions.DatabaseException;
 import com.devsuperior.dsmovie.services.exceptions.ResourceNotFoundException;
 

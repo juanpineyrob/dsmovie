@@ -1,6 +1,6 @@
 package com.devsuperior.dsmovie.tests;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
+import com.devsuperior.dsmovie.dtos.MovieDTO;
 import com.devsuperior.dsmovie.entities.MovieEntity;
 
 public class MovieFactory {

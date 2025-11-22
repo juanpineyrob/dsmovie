@@ -1,6 +1,6 @@
 package com.devsuperior.dsmovie.services;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
+import com.devsuperior.dsmovie.dtos.MovieDTO;
 import com.devsuperior.dsmovie.entities.MovieEntity;
 import com.devsuperior.dsmovie.repositories.MovieRepository;
 import com.devsuperior.dsmovie.services.exceptions.DatabaseException;

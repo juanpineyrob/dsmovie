@@ -1,6 +1,6 @@
 package com.devsuperior.dsmovie.tests;
 
-import com.devsuperior.dsmovie.dto.ScoreDTO;
+import com.devsuperior.dsmovie.dtos.ScoreDTO;
 import com.devsuperior.dsmovie.entities.MovieEntity;
 import com.devsuperior.dsmovie.entities.ScoreEntity;
 import com.devsuperior.dsmovie.entities.UserEntity;
